@@ -59,6 +59,12 @@
 .btn:hover {
   background-color: #0091e4;
 }
+
+.btn:disabled {
+  background-color: #ccc;
+  color: #333;
+  cursor: default;
+}
 .login {
   color: #00a8ff;
   font-size: 1.2rem;
@@ -75,4 +81,9 @@
 }
 .login-link:hover {
   color: #00a8ff;
+}
+
+.alert {
+  font-size: 0.7rem;
+  color: #c91b1b;
 }

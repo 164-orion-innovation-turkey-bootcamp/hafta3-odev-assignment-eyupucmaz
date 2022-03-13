@@ -4,30 +4,46 @@
       <h1>Signup</h1>
     </div>
     <div class="card-content">
-      <form (ngSubmit)="signup()">
-        <div class="form-group" [formGroup]="signupForm">
+      <form (ngSubmit)="signup()" [formGroup]="signupForm">
+        <div class="form-group">
           <label for="name">Name</label>
           <input
             type="text"
             class="form-control"
             id="name"
-            formControlName="firstName"
+            formControlName="name"
             autocomplete="off"
             required
           />
+          <span
+            class="alert"
+            *ngIf="
+              signupForm.get('name')?.hasError('required') &&
+              signupForm.get('name')?.touched
+            "
+            >*Name is required</span
+          >
         </div>
-        <div class="form-group" [formGroup]="signupForm">
+        <div class="form-group">
           <label for="lastname">Lastname</label>
           <input
             type="text"
             class="form-control"
             id="lastname"
-            formControlName="lastName"
+            formControlName="lastname"
             autocomplete="off"
             required
           />
+          <span
+            class="alert"
+            *ngIf="
+              signupForm.get('lastname')?.hasError('required') &&
+              signupForm.get('lastname')?.touched
+            "
+            >*Lastname is required</span
+          >
         </div>
-        <div class="form-group" [formGroup]="signupForm">
+        <div class="form-group">
           <label for="email">Email</label>
           <input
             type="email"
@@ -37,8 +53,16 @@
             autocomplete="off"
             required
           />
+          <span
+            class="alert"
+            *ngIf="
+              signupForm.get('email')?.hasError('required') &&
+              signupForm.get('email')?.touched
+            "
+            >*Email is required</span
+          >
         </div>
-        <div class="form-group" [formGroup]="signupForm">
+        <div class="form-group">
           <label for="password">Password</label>
           <input
             type="password"
@@ -48,7 +72,7 @@
             required
           />
         </div>
-        <div class="form-group" [formGroup]="signupForm">
+        <div class="form-group">
           <label for="confirmPassword">Confirm Your Password</label>
           <input
             type="password"
@@ -58,6 +82,7 @@
             required
           />
         </div>
+        <!-- [disabled]="signupForm.invalid" -->
         <button type="submit" class="btn btn-primary">Signup</button>
       </form>
     </div>
