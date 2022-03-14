@@ -1,6 +1,10 @@
 # LoginApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
+## Screenshots
+
+<img src="https://raw.githubusercontent.com/164-orion-innovation-turkey-bootcamp/hafta3-odev-assignment-eyupucmaz/main/login-app/ss-1.png" alt="Ss" style="height: auto; width:900px;"/>
+<img src="https://raw.githubusercontent.com/164-orion-innovation-turkey-bootcamp/hafta3-odev-assignment-eyupucmaz/main/login-app/ss-2.png" alt="Ss" style="height: auto; width:900px;"/>
+
 
 ## Development server
 
