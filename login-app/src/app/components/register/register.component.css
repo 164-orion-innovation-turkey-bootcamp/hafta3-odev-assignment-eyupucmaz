@@ -7,7 +7,6 @@
 }
 .card {
   width: 400px;
-  /* height: 400px; */
   border-radius: 0.7rem;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   background-color: hsl(200, 100%, 98%);
@@ -43,6 +42,12 @@
 .form-control:hover {
   border: 1px solid #00a8ff;
 }
+.form-control:focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: 0 0 0 0.2rem #c7d2fe;
+  border-color: #6366f1;
+}
 
 .btn {
   width: 100%;
@@ -61,28 +66,26 @@
 }
 
 .btn:disabled {
-  background-color: #ccc;
-  color: #333;
+  background-color: #eee;
+  color: #757575;
   cursor: default;
 }
-.login {
-  color: #00a8ff;
-  font-size: 1.2rem;
-  font-weight: bold;
+.signup {
+  color: #757575;
+  font-size: 1rem;
   text-align: center;
 }
 
-.login-link {
-  color: hsl(200, 100%, 30%);
-  font-size: 1.2rem;
-  font-weight: bold;
+.signup-link {
+  color: #3b82f6;
+  font-size: 1rem;
   text-align: center;
   cursor: pointer;
+  text-decoration: none;
 }
-.login-link:hover {
+.signup-link:hover {
   color: #00a8ff;
 }
-
 .alert {
   font-size: 0.7rem;
   color: #c91b1b;

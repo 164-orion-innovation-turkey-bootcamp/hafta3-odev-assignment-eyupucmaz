@@ -1,25 +1,53 @@
 {
   "users": [
     {
-      "id": "1",
+      "id": 1,
       "name": "John",
       "lastName": "Doe",
       "email": "johndoe@gmail.com",
-      "password": "123456"
+      "password": "123456asd"
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Jane",
       "lastName": "Doe",
       "email": "janedoe@gmail.com",
       "password": "123456"
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "John",
       "lastName": "Smith",
       "email": "johnsmith@gmail.com",
       "password": "123456"
+    },
+    {
+      "id": 4,
+      "firstname": "Eyyup",
+      "lastname": "ucmaz",
+      "email": "eyup@ucmaz.com",
+      "password": "Eyyup123"
+    },
+    {
+      "id": 5,
+      "name": "asdf",
+      "lastname": "asdf",
+      "email": "asdf@asd.com",
+      "password": "asdasd"
+    },
+    {
+      "id": 6,
+      "name": "Sherlock",
+      "lastname": "Holmes",
+      "email": "sherlock@holmes.com",
+      "password": "sehrlock"
+    },
+    {
+      "id": 7,
+      "name": "albert",
+      "lastname": "debug",
+      "email": "albert@debug.com",
+      "password": "asdasd"
     }
   ]
 }

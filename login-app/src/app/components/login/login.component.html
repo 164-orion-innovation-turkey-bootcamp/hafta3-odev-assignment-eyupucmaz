@@ -5,8 +5,8 @@
     </div>
     <div class="card-content">
       <!-- [formGroup]="loginForm" (ngSubmit)="onSubmit()" -->
-      <form [formGroup]="loginForm" >
-        <div class="form-group" >
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
           <label for="email">Email</label>
           <input
             type="email"
@@ -15,6 +15,14 @@
             formControlName="email"
             autocomplete="off"
           />
+          <span
+            class="alert"
+            *ngIf="
+              loginForm.get('email')?.hasError('required') &&
+              loginForm.get('email')?.touched
+            "
+            >*Email is required</span
+          >
         </div>
         <div class="form-group">
           <label for="password">Password</label>
@@ -24,15 +32,29 @@
             id="password"
             formControlName="password"
           />
+          <span
+            class="alert"
+            *ngIf="
+              loginForm.get('password')?.hasError('required') &&
+              loginForm.get('password')?.touched
+            "
+            >*Password is required</span
+          >
         </div>
         <!-- [disabled]="!loginForm.valid" -->
-        <button type="submit" class="btn btn-primary">Login</button>
+        <button
+          [disabled]="!loginForm.valid"
+          type="submit"
+          class="btn btn-primary"
+        >
+          Login
+        </button>
       </form>
     </div>
-    <div class="signup">
-      <p class="signup-text">
+    <div class="login">
+      <p class="login-text">
         Don't have an account?
-        <a class="signup-link" routerLink="/register">Signup 📝</a>
+        <a class="login-link" routerLink="/register">Create today!</a>
       </p>
     </div>
   </div>
